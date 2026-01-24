@@ -3,68 +3,109 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- العنوان الي فوق-->
-    <title>الرياضيات املنا</title>
-    <meta name="description" content="لامل لكل من يريد تعلم الرياضيات">
+    <title>الرياضيات أملنا - بوابة المهارات</title>
+    <meta name="description" content="الأمل لكل من يريد تعلم الرياضيات بالمهارات">
 </head>
 
 <body>
-    <header>مبروك اول خطوه لكم</header>
-    <nav>الجبر - القوى - العمليات</nav>
-    <audio controls autoplay loop>
-        <source src="media/001.mp3" type="audio/mpeg">
-        متصفحك لا يدعم تشغيل الملفات الصوتية
-    </audio>
-    <section>
-        <aside>الدعم</aside>
-        <h3>مساعد الذكاء لاصطناعي</h3>
+    <header>
+        <h1>هلا بمتعلمين <b>الرياضيات</b></h1>
+        <p>مبروك أول خطوة لكم في طريق الإبداع</p>
+    </header>
+
+    <section id="login-area">
+        <h3>سجل دخولك لتبدأ رحلتك:</h3>
+        <form>
+            <div>
+                <label for="first-name">اسمك الأول:</label>
+                <input type="text" id="first-name" placeholder="مثلاً: فهد" required>
+            </div>
+            <br>
+            <div>
+                <label for="user-pass">كلمة السر الخاصة بك:</label>
+                <input type="password" id="user-pass" required>
+            </div>
+            <br>
+            <button type="submit">دخول للمنصة</button>
+        </form>
     </section>
-    <h1>هلا بمتعلمين<b> الرياضيات</b></h1>
-    <p>حياكم الله في موقع الرياضيات املنا اذا ماتعرف<strong> رياضيات تعال وحنا بنعلمك </strong>بالمجان</p>
-    <a href="https://www.google.com" target="_blank" title="go to googie">google</a>
-    <ol>
-        <li>تعليمك عندنا</li>
-        <li>بالمجان</li>
-    </ol>
-    <a href="mailto:fahdtaherali@gmail.com">Contact me</a>
-    <dl>
-        <dt>الجهه المستهدفه</dt>
-        <dd>جميع طلاب<br> العالم وبلاخص الطلاب المرضى</dd>
-    </dl>
+
     <hr />
-    <div>
-        <table>
-            <caption>لابطال حقنا</caption>
-            <thead>
-                <tr>
-                    <td>لاسم لاول</td>
-                    <td>لاسم الثاني</td>
-                    <td>الدرجه</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>فهد</td>
-                    <td>طاهر</td>
-                    <td>90</td>
-                </tr>
-                <tr>
-                    <td>علي</td>
-                    <td>محمد</td>
-                    <td>80</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2">المجموع</td>
-                    <td>170</td>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+
+    <nav id="skills-selection">
+        <h3>ما هي المهارة التي تود إتقانها اليوم؟</h3>
+        <a href="#algebra">الجبر</a> |
+        <a href="#powers">القوى والأسس</a> |
+        <a href="#engineering">الهندسة</a> |
+        <a href="#calculus">التفاضل والتكامل</a>
+    </nav>
+
+    <br>
+
+    <main>
+        <section id="intro">
+            <p>حياكم الله في موقع الرياضيات أملنا، إذا ماتعرف <strong>رياضيات تعال وحنا بنعلمك</strong> بالمجان.</p>
+            <audio controls loop>
+                <source src="media/001.mp3" type="audio/mpeg">
+                متصفحك لا يدعم تشغيل الملفات الصوتية
+            </audio>
+        </section>
+
+        <section id="target">
+            <dl>
+                <dt><b>الجهة المستهدفة:</b></dt>
+                <dd>جميع طلاب العالم وبالأخص الطلاب المرضى.</dd>
+            </dl>
+            <aside>
+                <h4>مساعد الذكاء الاصطناعي</h4>
+                <p>قريباً.. دعم فني ذكي لمسائلكم الرياضية.</p>
+            </aside>
+        </section>
+
+        <hr>
+
+        <div id="leaderboard">
+            <table>
+                <caption>أبطال الرياضيات</caption>
+                <thead>
+                    <tr>
+                        <th>الاسم الأول</th>
+                        <th>الاسم الثاني</th>
+                        <th>الدرجة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>فهد</td>
+                        <td>طاهر</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>علي</td>
+                        <td>محمد</td>
+                        <td>80</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">المجموع</td>
+                        <td>170</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <br>
+
+    <section id="contact">
+        <a href="mailto:fahdtaherali@gmail.com">تواصل معي (Contact me)</a>
+        <br>
+        <a href="https://www.google.com" target="_blank">بحث في جوجل</a>
+    </section>
+
     <footer>
-        <p>جزاكم الله خير</p>
-        <p>ادعمونا لكي نستمر</p>
+        <p>جزاكم الله خير - ادعمونا لكي نستمر</p>
     </footer>
 </body>
 
