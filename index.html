@@ -17,18 +17,37 @@
 
     <section id="login-area">
         <h3>سجل دخولك لتبدأ رحلتك:</h3>
-        <form>
+        <form action="" method="post">
             <div>
                 <label for="first-name">اسمك الأول:</label>
-                <input type="text" id="first-name" placeholder="مثلاً: فهد" required>
+                <input type="text" id="first-name" placeholder="مثلاً: فهد" required name="first-name" autofocus>
             </div>
             <br>
             <div>
                 <label for="user-pass">كلمة السر الخاصة بك:</label>
-                <input type="password" id="user-pass" required autocomplete="current-password">
+                <input type="password" id="user-pass" required autocomplete="current-password" name="pass" minlength="5"
+                    maxlength="10">
+            </div>
+            <br>
+            <div>
+                <label for="email">ادخل ايميلك من فضلك</label>
+                <input type="email" id="email" required name="email">
+            </div>
+            <div>
+                <input type="checkbox" id="ج" value="الجبر" name="os">
+                <label for="ج">الجبر</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ق" value="القوى والأسس" name="os">
+                <label for="ق">القوى والأسس</label>
+            </div>
+            <div>
+                <input type="checkbox" id="ه" name="os" value="الهندسة">
+                <label for="ه">الهندسة</label>
             </div>
             <br>
             <button type="submit">دخول للمنصة</button>
+            <button type="reset">تحديث</button>
         </form>
     </section>
 
@@ -39,7 +58,6 @@
         <a href="#algebra">الجبر</a> |
         <a href="#powers">القوى والأسس</a> |
         <a href="#engineering">الهندسة</a> |
-        <a href="#calculus">التفاضل والتكامل</a>
     </nav>
 
     <br>
