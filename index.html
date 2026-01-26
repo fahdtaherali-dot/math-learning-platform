@@ -46,6 +46,30 @@
                 <label for="ه">الهندسة</label>
             </div>
             <br>
+            <div>
+                <label for="who-are-you">من انت</label>
+                <select id="who-are-you">
+                    <optgroup label="الي موجه لهم">
+                        <option value="sick">مريض</option>
+                        <option value="orphan" selected>يتيم</option>
+                    </optgroup>
+                    <optgroup label="من يريدون الفايده">
+                        <option value="normal">طالب عادي</option>
+                        <option value="entarnational">طالب عالمي</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="age">عمرك من فضلك</label>
+                <input id="age" type="date">
+            </div>
+            <div>
+                <label for="tolk">تكلم عن نفسك</label>
+                <textarea id="tolk" name="bio" rows="4" cols="30"
+                    placeholder="اكتب هنا أحلامك في عالم الرياضيات..."></textarea>
+            </div>
+            <br>
             <button type="submit">دخول للمنصة</button>
             <button type="reset">تحديث</button>
         </form>
