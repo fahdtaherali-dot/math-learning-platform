@@ -5,79 +5,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرياضيات أملنا - بوابة المهارات</title>
-    <meta name="description" content="الأمل لكل من يريد تعلم الرياضيات بالمهارات">
+    <meta name="description" content="الأمل لكل من يريد تعلم الرياضيات بالمهارات - مشروع فهد الشهاري">
+    <style>
+        /* تغيير خلفية الموقع وتنسيق الخط */
+        body {
+            background-color: #f0f4f8;
+            /* لون مريح للعين */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* تنسيق الهيدر (رأس الصفحة) */
+        header {
+            background: linear-gradient(135deg, #0044cc, #0088ff);
+            /* تدرج أزرق احترافي */
+            color: white;
+            padding: 40px !important;
+            border-bottom: 5px solid #ff9900;
+            /* لمسة برتقالية للأمل */
+            border-radius: 0 0 20px 20px;
+        }
+
+        /* تنسيق الجداول لتصبح مثل تطبيقات المحترفين */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: #0044cc;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        /* تنسيق الأزرار */
+        button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc7a00;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
-    <header style="text-align: center; padding: 20px;">
-        <img src="media/channels4_profile.jpg" alt="شعار الرياضيات أملنا" style="width: 150px; height: auto;">
+    <header role="banner" style="text-align: center; padding: 20px;">
+        <img src="media/channels4_profile.jpg" alt="شعار الرياضيات أملنا" style="width: 150px; height: auto;"
+            aria-hidden="false">
         <h1>الرياضيات أملنا</h1>
         <p>مبروك أول خطوة لكم في طريق الإبداع</p>
     </header>
 
-    <section id="login-area">
-        <h3>سجل دخولك لتبدأ رحلتك:</h3>
+    <section id="login-area" aria-labelledby="login-title">
+        <h3 id="login-title">سجل دخولك لتبدأ رحلتك:</h3>
         <form action="" method="post">
             <div>
                 <label for="first-name">اسمك الأول:</label>
-                <input type="text" id="first-name" placeholder="مثلاً: فهد" required name="first-name" autofocus>
+                <input type="text" id="first-name" placeholder="مثلاً: فهد" required aria-required="true"
+                    name="first-name" autofocus>
             </div>
             <br>
             <div>
                 <label for="user-pass">كلمة السر الخاصة بك:</label>
-                <input type="password" id="user-pass" required autocomplete="current-password" name="pass" minlength="5"
-                    maxlength="10">
+                <input type="password" id="user-pass" required aria-required="true" autocomplete="current-password"
+                    name="pass" minlength="5" maxlength="10">
             </div>
             <br>
             <div>
                 <label for="email">ادخل ايميلك من فضلك</label>
-                <input type="email" id="email" required name="email">
+                <input type="email" id="email" required aria-required="true" name="email">
             </div>
-            <div>
-                <input type="checkbox" id="ج" value="الجبر" name="os">
+            <br>
+            <div role="group" aria-labelledby="skills-label">
+                <p id="skills-label">اختر المهارات المهتم بها:</p>
+                <input type="checkbox" id="ج" value="الجبر" name="skill" aria-label="مهارة الجبر">
                 <label for="ج">الجبر</label>
-            </div>
-            <div>
-                <input type="checkbox" id="ق" value="القوى والأسس" name="os">
+
+                <input type="checkbox" id="ق" value="القوى والأسس" name="skill" aria-label="مهارة القوى والأسس">
                 <label for="ق">القوى والأسس</label>
-            </div>
-            <div>
-                <input type="checkbox" id="ه" name="os" value="الهندسة">
+
+                <input type="checkbox" id="ه" name="skill" value="الهندسة" aria-label="مهارة الهندسة">
                 <label for="ه">الهندسة</label>
             </div>
             <br>
             <div>
-                <label for="who-are-you">من انت</label>
-                <select id="who-are-you">
-                    <optgroup label="الي موجه لهم">
+                <label for="who-are-you">من أنت؟</label>
+                <select id="who-are-you" name="user-type" aria-label="تحديد فئة المستخدم">
+                    <optgroup label="الفئات الموجه لها الدعم">
                         <option value="sick">مريض</option>
                         <option value="orphan" selected>يتيم</option>
                     </optgroup>
-                    <optgroup label="من يريدون الفايده">
+                    <optgroup label="طلاب العلم">
                         <option value="normal">طالب عادي</option>
-                        <option value="entarnational">طالب عالمي</option>
+                        <option value="international">طالب عالمي</option>
                     </optgroup>
                 </select>
             </div>
             <br>
             <div>
-                <label for="age">عمرك من فضلك</label>
-                <input id="age" type="date">
+                <label for="age">تاريخ ميلادك (عمرك):</label>
+                <input id="age" type="date" name="birthday" aria-label="تحديد تاريخ الميلاد">
             </div>
+            <br>
             <div>
-                <label for="tolk">تكلم عن نفسك</label>
-                <textarea id="tolk" name="bio" rows="4" cols="30"
-                    placeholder="اكتب هنا أحلامك في عالم الرياضيات..."></textarea>
+                <label for="bio">تكلم عن نفسك وطموحك:</label><br>
+                <textarea id="bio" name="bio" rows="4" cols="30" placeholder="اكتب هنا أحلامك في عالم الرياضيات..."
+                    aria-label="سيرة ذاتية مختصرة للطالب"></textarea>
             </div>
             <br>
             <button type="submit">دخول للمنصة</button>
-            <button type="reset">تحديث</button>
+            <button type="reset">تحديث البيانات</button>
         </form>
     </section>
 
-    <hr />
+    <hr aria-hidden="true" />
 
-    <nav id="skills-selection">
+    <nav id="skills-selection" role="navigation" aria-label="قائمة مهارات الرياضيات">
         <h3>ما هي المهارة التي تود إتقانها اليوم؟</h3>
         <a href="#algebra">الجبر</a> |
         <a href="#powers">القوى والأسس</a> |
@@ -86,36 +148,36 @@
 
     <br>
 
-    <main>
-        <section id="intro">
+    <main role="main">
+        <section id="intro" aria-label="مقدمة ترحيبية">
             <p>حياكم الله في موقع الرياضيات أملنا، إذا ما تعرف <strong>الرياضيات تعال ونحن بنعلمك</strong> بالمجان.</p>
-            <audio controls loop>
+            <audio controls loop aria-label="شرح صوتي ترحيبي">
                 <source src="media/001.mp3" type="audio/mpeg">
                 متصفحك لا يدعم تشغيل الملفات الصوتية
             </audio>
         </section>
 
-        <section id="target">
+        <section id="target" aria-labelledby="target-title">
             <dl>
-                <dt><b>الجهة المستهدفة:</b></dt>
-                <dd>جميع طلاب العالم وبالأخص الطلاب المرضى.</dd>
+                <dt id="target-title"><b>الجهة المستهدفة:</b></dt>
+                <dd>جميع طلاب العالم وبالأخص الأيتام والطلاب المرضى.</dd>
             </dl>
-            <aside>
+            <aside id="ai-assistant" role="complementary" aria-live="polite">
                 <h4>مساعد الذكاء الاصطناعي</h4>
                 <p>قريباً.. دعم فني ذكي لمسائلكم الرياضية.</p>
             </aside>
         </section>
 
-        <hr>
+        <hr aria-hidden="true">
 
-        <div id="leaderboard">
+        <div id="leaderboard" aria-labelledby="table-caption">
             <table>
-                <caption>أبطال الرياضيات</caption>
+                <caption id="table-caption">أبطال الرياضيات</caption>
                 <thead>
                     <tr>
-                        <th>الاسم الأول</th>
-                        <th>الاسم الثاني</th>
-                        <th>الدرجة</th>
+                        <th scope="col">الاسم الأول</th>
+                        <th scope="col">الاسم الثاني</th>
+                        <th scope="col">الدرجة</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -132,7 +194,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2">المجموع</td>
+                        <th scope="row" colspan="2">المجموع</th>
                         <td>170</td>
                     </tr>
                 </tfoot>
@@ -142,13 +204,14 @@
 
     <br>
 
-    <section id="contact">
-        <a href="mailto:fahdtaherali@gmail.com">تواصل معي (Contact me)</a>
+    <section id="contact" aria-label="روابط التواصل">
+        <a href="mailto:fahdtaherali@gmail.com" aria-label="إرسال بريد إلكتروني لفهد">تواصل معي (Contact me)</a>
         <br>
-        <a href="https://www.google.com" target="_blank">بحث في جوجل</a>
+        <a href="https://www.google.com" target="_blank" aria-label="البحث في جوجل (يفتح في نافذة جديدة)">بحث في
+            جوجل</a>
     </section>
 
-    <footer>
+    <footer role="contentinfo" style="text-align: center;">
         <p>جزاكم الله خير - ادعمونا لكي نستمر</p>
     </footer>
 </body>
