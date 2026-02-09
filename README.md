@@ -5,7 +5,8 @@ I started this initiative because one day, while visiting the hospital with my f
 My Vision: To help every student, everywhere in the world—especially sick students—to learn and love math. I love math, and through this initiative, I want the whole world to see how beautiful it is.
 
 Future Plans:
-
 Add interactive math games for younger kids.
+
 Create a section for math puzzles to make learning fun.
+
 Collaborate with other students to add more lesson.
