@@ -9,154 +9,166 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header role="banner" style="text-align: center; padding: 20px;">
-        <img src="media/channels4_profile.jpg" alt="شعار الرياضيات أملنا" style="width: 150px; height: auto;"
-            aria-hidden="false">
-        <h1>الرياضيات أملنا</h1>
-        <p>مبروك أول خطوة لكم في طريق الإبداع</p>
-    </header>
-
-    <section id="login-area" aria-labelledby="login-title">
-        <h3 id="login-title">سجل دخولك لتبدأ رحلتك:</h3>
-        <form action="" method="post">
-            <div>
-                <label for="first-name">اسمك الأول:</label>
-                <input type="text" id="first-name" placeholder="مثلاً: فهد" required aria-required="true"
-                    name="first-name" autofocus>
+<body Flexbox padding>
+    <div padding>
+        <div padding>
+            <div role="alert" aria-live="assertive"
+                style="background-color: #ffdddd; padding: 10px; border: 1px solid red; margin: 20px;">
+                <strong>تنبيه:</strong> هذا الموقع لا يزال في مرحلة التطوير، قد تواجه بعض المشاكل التقنية. شكراً
+                لتفهمكم!
+                <header role="banner" style="text-align: center; padding: 20px;">
+                    <img src="media/channels4_profile.jpg" alt="شعار الرياضيات أملنا"
+                        style="width: 150px; height: auto;" aria-hidden="false">
+                    <h1>الرياضيات أملنا</h1>
+                    <p>مبروك أول خطوة لكم في طريق الإبداع</p>
+                </header>
             </div>
+            <section id="login-area" aria-labelledby="login-title">
+                <h3 id="login-title">سجل دخولك لتبدأ رحلتك:</h3>
+                <form action="" method="post">
+                    <div>
+                        <label for="first-name">اسمك الأول:</label>
+                        <input type="text" id="first-name" placeholder="مثلاً: فهد" required aria-required="true"
+                            name="first-name" autofocus>
+                    </div>
+                    <div>
+                        <br>
+                        <div>
+                            <label for="user-pass">كلمة السر الخاصة بك:</label>
+                            <input type="password" id="user-pass" required aria-required="true"
+                                autocomplete="current-password" name="pass" minlength="5" maxlength="10">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">ادخل ايميلك من فضلك</label>
+                            <input type="email" id="email" required aria-required="true" name="email">
+                        </div>
+                        <br>
+                        <div role="group" aria-labelledby="skills-label">
+                            <p id="skills-label">اختر المهارات المهتم بها:</p>
+                            <input type="checkbox" id="ج" value="الجبر" name="skill" aria-label="مهارة الجبر">
+                            <label for="ج">الجبر</label>
+
+                            <input type="checkbox" id="ق" value="القوى والأسس" name="skill"
+                                aria-label="مهارة القوى والأسس">
+                            <label for="ق">القوى والأسس</label>
+
+                            <input type="checkbox" id="ه" name="skill" value="الهندسة" aria-label="مهارة الهندسة">
+                            <label for="ه">الهندسة</label>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="who-are-you">من أنت؟</label>
+                            <select id="who-are-you" name="user-type" aria-label="تحديد فئة المستخدم">
+                                <optgroup label="الفئات الموجه لها الدعم">
+                                    <option value="sick">مريض</option>
+                                    <option value="orphan" selected>يتيم</option>
+                                </optgroup>
+                                <optgroup label="طلاب العلم">
+                                    <option value="normal">طالب عادي</option>
+                                    <option value="international">طالب عالمي</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="age">تاريخ ميلادك (عمرك):</label>
+                        <input id="age" type="date" name="birthday" aria-label="تحديد تاريخ الميلاد">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="bio">تكلم عن نفسك وطموحك:</label><br>
+                        <textarea id="bio" name="bio" rows="4" cols="30"
+                            placeholder="اكتب هنا أحلامك في عالم الرياضيات..."
+                            aria-label="سيرة ذاتية مختصرة للطالب"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit">دخول للمنصة</button>
+                    <button type="reset">تحديث البيانات</button>
+                </form>
+            </section>
+
+            <hr aria-hidden="true" />
+
+            <nav id="skills-selection" role="navigation" aria-label="قائمة مهارات الرياضيات">
+                <h3>ما هي المهارة التي تود إتقانها اليوم؟</h3>
+                <a href="#algebra">الجبر</a> |
+                <a href="#powers">القوى والأسس</a> |
+                <a href="#engineering">الهندسة</a> |
+            </nav>
+
             <br>
-            <div>
-                <label for="user-pass">كلمة السر الخاصة بك:</label>
-                <input type="password" id="user-pass" required aria-required="true" autocomplete="current-password"
-                    name="pass" minlength="5" maxlength="10">
-            </div>
+
+            <main role="main">
+                <section id="intro" aria-label="مقدمة ترحيبية">
+                    <p>حياكم الله في موقع الرياضيات أملنا، إذا ما تعرف <strong>الرياضيات تعال ونحن بنعلمك</strong>
+                        بالمجان.
+                    </p>
+                    <audio controls loop aria-label="شرح صوتي ترحيبي">
+                        <source src="media/001.mp3" type="audio/mpeg">
+                        متصفحك لا يدعم تشغيل الملفات الصوتية
+                    </audio>
+                </section>
+
+                <section id="target" aria-labelledby="target-title">
+                    <dl>
+                        <dt id="target-title"><b>الجهة المستهدفة:</b></dt>
+                        <dd>جميع طلاب العالم وبالأخص الأيتام والطلاب المرضى.</dd>
+                    </dl>
+                    <aside id="ai-assistant" role="complementary" aria-live="polite">
+                        <h4>مساعد الذكاء الاصطناعي</h4>
+                        <p>قريباً.. دعم فني ذكي لمسائلكم الرياضية.</p>
+                    </aside>
+                </section>
+
+                <hr aria-hidden="true">
+
+                <div id="leaderboard" aria-labelledby="table-caption">
+                    <table>
+                        <caption id="table-caption">أبطال الرياضيات</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">الاسم الأول</th>
+                                <th scope="col">الاسم الثاني</th>
+                                <th scope="col">الدرجة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>فهد</td>
+                                <td>طاهر</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>علي</td>
+                                <td>محمد</td>
+                                <td>80</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="2">المجموع</th>
+                                <td>170</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </main>
+
             <br>
-            <div>
-                <label for="email">ادخل ايميلك من فضلك</label>
-                <input type="email" id="email" required aria-required="true" name="email">
-            </div>
-            <br>
-            <div role="group" aria-labelledby="skills-label">
-                <p id="skills-label">اختر المهارات المهتم بها:</p>
-                <input type="checkbox" id="ج" value="الجبر" name="skill" aria-label="مهارة الجبر">
-                <label for="ج">الجبر</label>
 
-                <input type="checkbox" id="ق" value="القوى والأسس" name="skill" aria-label="مهارة القوى والأسس">
-                <label for="ق">القوى والأسس</label>
+            <section id="contact" aria-label="روابط التواصل">
+                <a href="mailto:fahdtaherali@gmail.com" aria-label="إرسال بريد إلكتروني لفهد">تواصل معي (Contact me)</a>
+                <br>
+                <a href="https://www.google.com" target="_blank" aria-label="البحث في جوجل (يفتح في نافذة جديدة)">بحث في
+                    جوجل</a>
+            </section>
 
-                <input type="checkbox" id="ه" name="skill" value="الهندسة" aria-label="مهارة الهندسة">
-                <label for="ه">الهندسة</label>
-            </div>
-            <br>
-            <div>
-                <label for="who-are-you">من أنت؟</label>
-                <select id="who-are-you" name="user-type" aria-label="تحديد فئة المستخدم">
-                    <optgroup label="الفئات الموجه لها الدعم">
-                        <option value="sick">مريض</option>
-                        <option value="orphan" selected>يتيم</option>
-                    </optgroup>
-                    <optgroup label="طلاب العلم">
-                        <option value="normal">طالب عادي</option>
-                        <option value="international">طالب عالمي</option>
-                    </optgroup>
-                </select>
-            </div>
-            <br>
-            <div>
-                <label for="age">تاريخ ميلادك (عمرك):</label>
-                <input id="age" type="date" name="birthday" aria-label="تحديد تاريخ الميلاد">
-            </div>
-            <br>
-            <div>
-                <label for="bio">تكلم عن نفسك وطموحك:</label><br>
-                <textarea id="bio" name="bio" rows="4" cols="30" placeholder="اكتب هنا أحلامك في عالم الرياضيات..."
-                    aria-label="سيرة ذاتية مختصرة للطالب"></textarea>
-            </div>
-            <br>
-            <button type="submit">دخول للمنصة</button>
-            <button type="reset">تحديث البيانات</button>
-        </form>
-    </section>
-
-    <hr aria-hidden="true" />
-
-    <nav id="skills-selection" role="navigation" aria-label="قائمة مهارات الرياضيات">
-        <h3>ما هي المهارة التي تود إتقانها اليوم؟</h3>
-        <a href="#algebra">الجبر</a> |
-        <a href="#powers">القوى والأسس</a> |
-        <a href="#engineering">الهندسة</a> |
-    </nav>
-
-    <br>
-
-    <main role="main">
-        <section id="intro" aria-label="مقدمة ترحيبية">
-            <p>حياكم الله في موقع الرياضيات أملنا، إذا ما تعرف <strong>الرياضيات تعال ونحن بنعلمك</strong> بالمجان.</p>
-            <audio controls loop aria-label="شرح صوتي ترحيبي">
-                <source src="media/001.mp3" type="audio/mpeg">
-                متصفحك لا يدعم تشغيل الملفات الصوتية
-            </audio>
-        </section>
-
-        <section id="target" aria-labelledby="target-title">
-            <dl>
-                <dt id="target-title"><b>الجهة المستهدفة:</b></dt>
-                <dd>جميع طلاب العالم وبالأخص الأيتام والطلاب المرضى.</dd>
-            </dl>
-            <aside id="ai-assistant" role="complementary" aria-live="polite">
-                <h4>مساعد الذكاء الاصطناعي</h4>
-                <p>قريباً.. دعم فني ذكي لمسائلكم الرياضية.</p>
-            </aside>
-        </section>
-
-        <hr aria-hidden="true">
-
-        <div id="leaderboard" aria-labelledby="table-caption">
-            <table>
-                <caption id="table-caption">أبطال الرياضيات</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">الاسم الأول</th>
-                        <th scope="col">الاسم الثاني</th>
-                        <th scope="col">الدرجة</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>فهد</td>
-                        <td>طاهر</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <td>علي</td>
-                        <td>محمد</td>
-                        <td>80</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row" colspan="2">المجموع</th>
-                        <td>170</td>
-                    </tr>
-                </tfoot>
-            </table>
+            <footer role="contentinfo" style="text-align: center;">
+                <p>جزاكم الله خير - ادعمونا لكي نستمر</p>
+            </footer>
         </div>
-    </main>
-
-    <br>
-
-    <section id="contact" aria-label="روابط التواصل">
-        <a href="mailto:fahdtaherali@gmail.com" aria-label="إرسال بريد إلكتروني لفهد">تواصل معي (Contact me)</a>
-        <br>
-        <a href="https://www.google.com" target="_blank" aria-label="البحث في جوجل (يفتح في نافذة جديدة)">بحث في
-            جوجل</a>
-    </section>
-
-    <footer role="contentinfo" style="text-align: center;">
-        <p>جزاكم الله خير - ادعمونا لكي نستمر</p>
-    </footer>
 </body>
-
 
 </html>
