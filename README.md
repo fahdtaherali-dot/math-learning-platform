@@ -15,4 +15,4 @@ To make this vision a reality, I am working on:
 * **Collaboration:** Working with other passionate students to expand our library of lessons.
 
 ---
-*“Math is not just numbers; it’s a language of hope.”*
+“Math is not just numbers; it’s a language of hope.”
