@@ -13,6 +13,3 @@ To make this vision a reality, I am working on:
 * **Interactive Games:** Developing math games specifically for younger kids to learn through play.
 * **Math Puzzles:** Creating a dedicated section for puzzles to make the learning process fun and engaging.
 * **Collaboration:** Working with other passionate students to expand our library of lessons.
-
----
-“Math is not just numbers; it’s a language of hope.”
